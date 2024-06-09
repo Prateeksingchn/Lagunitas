@@ -603,3 +603,7 @@ html, body {
 #page7_part2 > button:hover {
     background-color: #444;
 }
+
+#page9 ul {
+    font-family: 'Anton', sans-serif;
+}
