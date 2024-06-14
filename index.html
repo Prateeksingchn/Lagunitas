@@ -17,7 +17,9 @@
 <body>
 
     <nav id="nav_top">
-        <img src="img/lagunitas-logo.png" alt="">
+        <div class="logo-container">
+            <img src="img/lagunitas-logo.png" alt="">
+        </div>
         <button>Buy Beer</button>
         <i class="ri-menu-line"></i>
     </nav>
@@ -33,48 +35,53 @@
             <img id="page1_dog_image" src="./img/dogimage.png" alt="">
         </div>
 
-        <div id="page2">
-            <div id="page2_part1">
-                <h3>unlimited release</h3>
-                <h1>India Pale Ale</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias,
-                    officia error? Totam unde nulla ea repudiandae, corporis optio recusandae
-                    repellat asperiores minima voluptate soluta laboriosam debitis architecto
-                    quaerat fugiat nostrum aliquam. Minima ratione sequi omnis ipsa beatae ab odio
-                    id ad, voluptates fuga incidunt nisi.
-                </p>
-                <button>Buy Now!</button>
-            </div>
-            <div id="page2_part2">
-                <h3>ABV</h3>
-                <h5>Alcohole by valume</h5>
-                <div id="box">
-                    <h2>6.2 <span>%</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia corporis facere
-                        ullam hic tempore unde quaerat quisquam
+        <div id="page2" class="flex flex-col justify-between items-end p-4 ">
+            <h1 class="w-11/12 text-9xl leading-none font-semibold uppercase bg-cover bg-center text-transparent bg-clip-text" style="background-image: url('img/texture.png');">
+                BEVERAGE SPECS
+            </h1>
+            <div class="flex items-center justify-between w-full">
+                <div id="page2_part1" class="w-1/4 h-4/5">
+                    <h3 class="font-dancing-script mb-3">Unlimited Release</h3>
+                    <h1 class="w-1/4 h-1/3 text-6xl leading-none font-semibold uppercase mb-3 bg-cover bg-top text-transparent bg-clip-text" style="background-image: url('img/texture.png');">
+                        India Pale Ale
+                    </h1>
+                    <p class="font-gilroy text-gray-900 text-sm font-medium leading-6 mb-4">
+                        A well-rounded, Highly drinkable India Pale Ale. A bit of Caramel Malt barley provides the richness that mellows out the twang of the hops, including Cascade, Centennial, Chinook and a splash of honorary “C” hop, Simcoe. Best enjoyed from mustache.
                     </p>
+                    <button class="py-3 px-7 text-white bg-black uppercase font-bold text-sm cursor-pointer">Buy Now!</button>
                 </div>
-                <h3>IBU</h3>
-                <h5>Isn't Reservation Units</h5>
-                <div id="box">
-                    <h2>51 <span>.1</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia corporis facere
-                        ullam hic tempore unde quaerat quisquam
-                    </p>
-                </div>
-                <div id="page2_part2_text1">
-                    <h3>ABV</h3>
-                    <h5>Alcohole by valume</h5>
-                    <div id="box">
-                        <h2>6.2 <span>%</span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia corporis facere
-                            ullam hic tempore unde quaerat quisquam
+                <div id="page2_part2" class="w-1/3 h-4/5 font-gilroy mr-20">
+                    <h3 class="text-2xl mb-1 font-semibold uppercase">ABV</h3>
+                    <h5 class="text-sm mb-2 font-semibold text-gray-500">Alcohol by Volume</h5>
+                    <div id="box" class="flex justify-between items-center border-t-2 border-black mb-2">
+                        <h2 class="text-6xl font-bold">6.2 <span>%</span></h2>
+                        <p class="text-sm w-1/2 text-gray-900 leading-tight">
+                            Beer math on ABV is pretty straightforward. The higher the ABV, the more alcohol in the beer. See, no rocket science necessary.
                         </p>
+                    </div>
+                    <h3 class="text-2xl mb-1 font-semibold uppercase">IBU</h3>
+                    <h5 class="text-sm mb-2 font-semibold text-gray-500">International Bitterness Units</h5>
+                    <div id="box" class="flex justify-between items-center border-t-2 border-black mb-2">
+                        <h2 class="text-6xl font-bold">51</h2>
+                        <p class="text-sm w-1/2 text-gray-900 leading-tight">
+                            Generally speaking, a high IBU beer will have a more bitter taste than a lower IBU beer.
+                        </p>
+                    </div>
+                    <div id="page2_part2_text1">
+                        <h3 class="text-2xl mb-1 font-semibold uppercase">OG</h3>
+                        <h5 class="text-sm mb-2 font-semibold text-gray-500">Original Gravity</h5>
+                        <div id="box" class="flex justify-between items-center border-t-2 border-black">
+                            <h2 class="text-6xl font-bold">13.5 <span>%</span></h2>
+                            <p class="text-sm w-1/2 text-gray-900 leading-tight">
+                                The OG measures solids in the wort before fermentation to consistently arrive at the same alcohol content of a beer. Pretty neat, huh?
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        
         <div id="page3">
             <h1>MounthFeels</h1>
             <div id="page3_text">
@@ -92,29 +99,28 @@
             </div>
         </div>
 
+
+        
         <div id="page4">
             <div id="page4_color1">
                 <img id="page4_color_image1" src="img/Green-LSS.png" alt="">
                 <div id="page4_color_image1_text">
-                    <h4>tropical</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia harum accusamus placeat distinctio
-                        iusto exercitationem labore nulla atque temporibus beatae?</p>
+                    <h4>"C" HOPS</h4>
+                    <p>The use of old school “C” hops like Cascade Centennial & Chinook brings a touch of citrus flavor in IPA that is both bright and deep</p>
                 </div>
             </div>
             <div id="page4_color2">
                 <img id="page4_color_image2" src="img/Green-LSS.png" alt="">
                 <div id="page4_color_image2_text">
-                    <h4>pink</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia harum accusamus placeat distinctio
-                        iusto exercitationem labore nulla atque temporibus beatae?</p>
+                    <h4>PINE-INESS</h4>
+                    <p>The pine aromas (all from the hops) balance out the more dominating citrus & caramel notes, makin’ you crave another sip.</p>
                 </div>
             </div>
             <div id="page4_color3">
                 <img id="page4_color_image3" src="img/splat-black.png" alt="">
                 <div id="page4_color_image3_text">
-                    <h4>caramel-malt</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia harum accusamus placeat distinctio
-                        iusto exercitationem labore nulla atque temporibus beatae?</p>
+                    <h4>CARAMEL MALTS</h4>
+                    <p>IPA is chock-full of caramel malted barley that brings a special depth of flavor to the beer. While lots of other malts bring biscuity flavors, this brings tastes of caramelized sugar as well as a beautiful orange hue.</p>
                 </div>
             </div>
             <img src="./img/LittleSumpin_MasonJar_Photo-671x1024.png" alt="" id="page4_color_image4">

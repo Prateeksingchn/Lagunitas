@@ -36,8 +36,18 @@ html, body {
     border-bottom: 3px solid rgb(199, 29, 29);
     /* margin-bottom: 50px; */
 }
-#nav_top>img {
+
+/* Center the logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.logo-container img {
     height: 50px;
+    margin-top: 20px;
 }
 #nav_top>button {
     padding: 13px 30px;
@@ -83,7 +93,7 @@ html, body {
 
 #bottle {
     position: absolute;
-    height: 95vh;
+    height: 94vh;
     top: 0%;
     left: 38%;
     z-index: 990;
@@ -104,15 +114,15 @@ html, body {
     position: relative;
 }
 #page1 h1 {
-    width: 60vw;
+    width: 90vw;
     background-color: rgb(153, 13, 13);
     font-family: 'Antom', sans-serif;
-    font-size: 13vw;
+    font-size: 13.6vw;
     font-weight: 900;
     text-align: center;
     word-spacing: -1.5vw;
     text-transform: uppercase;
-    line-height: 12vw;
+    line-height: 14vw;
     background-image: url(img/texture.png);
     background-position: center;
     background-size: cover;
@@ -125,7 +135,7 @@ html, body {
     height: 15vh;
     position: absolute;
     top: 17%;
-    left: 34.5%;
+    left: 35.5%;
     transform: rotate(-30deg);
 }
 
@@ -136,9 +146,28 @@ html, body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 4.1vw 0 10vw;
+    align-items: end;
+    /* padding: 0 1vw 0 10vw; */
+    padding-left: 7vw;
+    padding-right: 2vw;
+}
+
+#page2 h1 {
+    width: 95vw;
+    font-size: 15.3vw;
+    line-height: 15.5vw;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    background: url(img/texture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: rgb(177, 29, 29);
 }
 
 #page2_part1 {
@@ -170,68 +199,36 @@ html, body {
 }
 #page2_part1>p {
     font-family: Gilroy;
-    color: #111;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 22px;
-    margin-bottom: 15px;
+
 }
 #page2_part1>button {
-    padding: 10px 20px;
-    font-family: "druk heavy";
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 800;
-    line-height: 20px;
-    white-space: nowrap;
-    background-color: black;
-    border-style: none;
-    cursor: pointer;
-    color: #fff;
+    /* font-family: "druk heavy"; */
+    font-family: 'Anton', sans-serif;
+
 }
 
 #page2_part2 {
-    width: 26.5vw;
+    width: 28.5vw;
     height: 65vh;
-    padding: 3.5vmax 3.5vmax;
-    border: 0.2vmax solid black;
-    box-shadow: 0 0 0.2vmax black;
+    /* padding: 3.5vmax 3.5vmax; */
+    /* border: 0.2vmax solid black; */
+    /* box-shadow: 0 0 0.2vmax black; */
     font-family: Gilroy;
 }
 #page2_part2 h3 {
-    font-size: 15px;
-    margin-bottom: 3px;
-    font-weight: 600;
-}
-#page2_part2 h5 {
-    font-size: 13px;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #666;
+    font-family: 'Anton', sans-serif;
 }
 
 
-#box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 0.2vmax solid black;
-    margin-bottom: 1vh;
-}
 #page2_part2 p {
-    font-size: 10px;
-    width: 12vw;
-    color: #111;
-    line-height: 13px;
-    font-weight: 600;
+    font-family: gilroy;
 }
 
 #box h2 {
-    font-size: 40px;
-    font-family: "druk heavy";
+    font-family: 'Anton', sans-serif;
 }
 #box h2 span {
-    font-size: 30px;
+    font-family: 'Anton', sans-serif;
 }
 
 /* page 3 css */
@@ -314,7 +311,7 @@ html, body {
 #page4_color_image1_text {
     width: 13vw;
     position: absolute;
-    top: 5%;
+    top: 8%;
     left: 15%;
     color: #fff;
     text-align: center;
@@ -324,7 +321,7 @@ html, body {
     margin-bottom: 1vh;
     margin-left: 3vmax;
     font-family: 'Anton', sans-serif;
-    border-bottom: 0.2vmax solid #000;
+    border-bottom: 0.2vmax solid #fff;
     font-weight: 100;
     letter-spacing: 0.1vmax;
     text-transform: uppercase;
@@ -338,18 +335,18 @@ html, body {
 }
 
 #page4_color_image2_text {
-    width: 13vw;
+    width: 12.7vw;
     position: absolute;
-    top: 32%;
-    left: 33%;
+    top: 34%;
+    left: 31%;
     color: #fff;
     text-align: center;
 }
 #page4_color_image2_text h4 {
-    width: 4vw;
+    width: 5vw;
     margin-left: 5vmax;
     font-family: 'Anton', sans-serif;
-    border-bottom: 0.2vmax solid #000;
+    border-bottom: 0.2vmax solid #fff;
     font-weight: 100;
     letter-spacing: 0.1vmax;
     text-align: center;
@@ -377,7 +374,7 @@ html, body {
     margin-left: 3.5vmax;
     text-transform: uppercase;
     font-family: 'Anton', sans-serif;
-    border-bottom: 0.2vmax solid #000;
+    border-bottom: 0.2vmax solid #fff;
     font-weight: 100;
     letter-spacing: 0.1vmax;
     text-transform: uppercase;
@@ -404,8 +401,8 @@ html, body {
     flex-direction: column;
 }
 #page5 h5 {
-    font-size: 2.5vmax;
-    font-family: Gilroy;
+    font-size: 3vmax;
+    font-family: dancing script;
 }
 #page5 h1 {
     width: 30vw;
@@ -489,10 +486,11 @@ html, body {
 }
 
 #page6 img {
-    width: 45vw;
-    height: 62vh;
+    width: 50vw;
+    height: 50vh;
     object-fit: cover;
-    border-radius: 10px;
+    object-position: center;
+    border-radius: 20px;
 }
 
 #page6_part2 {
@@ -506,7 +504,7 @@ html, body {
 
 #page6_part2 h5 {
     font-size: 2vmax;
-    font-family: 'Gilroy', sans-serif;
+    font-family: dancing script;
 }
 
 #page6_part2 h1 {
@@ -559,9 +557,9 @@ html, body {
 
 #page7 img {
     width: 45vw;
-    height: 62vh;
+    height: 50vh;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #page7_part2 {
@@ -575,7 +573,7 @@ html, body {
 
 #page7_part2 h5 {
     font-size: 2vmax;
-    font-family: 'Gilroy', sans-serif;
+    font-family: dancing script;
 }
 
 #page7_part2 h1 {
