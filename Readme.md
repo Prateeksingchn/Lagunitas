@@ -114,7 +114,7 @@ This project is a complete website redesign for **Kyara Beverages**, a health-fo
 
 1. **Clone or Download** the project files
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/Prateeksingchn/Kyara-Beverages
    cd kyara-beverages-website
    ```
 
@@ -124,17 +124,9 @@ This project is a complete website redesign for **Kyara Beverages**, a health-fo
    - **Option 1:** Double-click `index.html` file
    - **Option 2:** Use a local server (recommended):
      ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js
-     npx http-server .
-     
      # Using VS Code Live Server extension
      Right-click index.html → "Open with Live Server"
      ```
-
-4. **View the website** at `http://localhost:8000` (or your local server URL)
 
 ## 🎨 Color Palette
 
