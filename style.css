@@ -6,7 +6,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color: #F4F1E8;
+    background-color: #f9f5f0;
 }
 #main {
     width: 100vw;
@@ -20,20 +20,31 @@ html, body {
     overflow-y: hidden;
 }
 
+:root {
+    --primary: #7eb77f; /* Soft green for health/nature */
+    --secondary: #e8c07d; /* Warm gold for millet */
+    --accent: #e27d60; /* Soft coral for fruit */
+    --light: #f9f5f0; /* Cream background */
+    --dark: #4a4a4a; /* Soft black for text */
+    --gradient-primary: linear-gradient(135deg, var(--primary), #a6dcb0); /* Green gradient */
+    --gradient-secondary: linear-gradient(135deg, var(--secondary), #f2d9a9); /* Gold gradient */
+    --gradient-accent: linear-gradient(135deg, var(--accent), #f2a990); /* Coral gradient */
+}
+
 /* Nav Top Css */
 
 #nav_top {
     width: 94.2vw;
     height: 12vh;
     padding: 0 4.5vw 0 4vw;
-    background-color: #F4F1E8;
+    background-color: var(--light);
     left: 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     z-index: 1;
-    border-bottom: 3px solid rgb(199, 29, 29);
+    border-bottom: 3px solid var(--primary);
     /* margin-bottom: 50px; */
 }
 
@@ -46,23 +57,29 @@ html, body {
 }
 
 .logo-container img {
-    height: 50px;
+    height: 60px;
     margin-top: 20px;
 }
 #nav_top>button {
     padding: 13px 30px;
-    /* font-family: "druk heavy"; */
-    font-family: 'Anton', sans-serif;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 600;
     line-height: 24px;
-    font-size: 18px;
     color: #fff;
     white-space: nowrap;
-    background-color: rgb(199, 29, 29);
+    background-color: var(--primary);
     border-style: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#nav_top>button:hover {
+    background-color: #6ca56d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #nav_top>i {
@@ -84,7 +101,7 @@ html, body {
     position: absolute;
     z-index: 1;
     gap: 2vmax;
-    border-bottom: 3px solid rgb(43, 42, 42);
+    border-bottom: 3px solid var(--secondary);
 }
 #nav_left i {
     font-size: 1.2vw;
@@ -98,6 +115,7 @@ html, body {
     left: 38%;
     z-index: 990;
     border-image: 0 0 2vmax black;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
 #bottlecopy {
     display: none;
@@ -109,34 +127,41 @@ html, body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: url(img/hero-bg.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #page1 h1 {
     width: 90vw;
-    background-color: rgb(153, 13, 13);
-    font-family: 'Antom', sans-serif;
-    font-size: 13.6vw;
+    background-color: var(--primary);
+    font-family: 'Anton', sans-serif;
+    font-size: 12vw;
     font-weight: 900;
     text-align: center;
-    word-spacing: -1.5vw;
+    word-spacing: -1vw;
     text-transform: uppercase;
     line-height: 14vw;
-    background-image: url(img/texture.png);
+    background-image: url(img/grain-texture.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-font-smoothing: antialiased;
+    margin-bottom: 2vh;
 }
-#page1_dog_image {
-    height: 15vh;
-    position: absolute;
-    top: 17%;
-    left: 35.5%;
-    transform: rotate(-30deg);
+#page1_tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400;
+    color: var(--dark);
+    text-align: center;
+    letter-spacing: 0.1vw;
 }
 
 /* Page 2 Css */
@@ -152,6 +177,7 @@ html, body {
     /* padding: 0 1vw 0 10vw; */
     padding-left: 7vw;
     padding-right: 2vw;
+    background-color: #f9f5f0;
 }
 
 #page2 h1 {
@@ -161,13 +187,13 @@ html, body {
     font-weight: 500;
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
-    background: url(img/texture.png);
+    background: url(img/grain-texture.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: rgb(177, 29, 29);
+    background-color: var(--secondary);
 }
 
 #page2_part1 {
@@ -188,23 +214,31 @@ html, body {
     text-transform: uppercase;
     margin-bottom: 12px;
     word-spacing: -1vmax;
-    background: url(img/texture.png);
+    background: url(img/grain-texture.svg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: black;
+    background-color: var(--accent);
     -webkit-font-smoothing: antialiased;
 }
 #page2_part1>p {
-    font-family: Gilroy;
-
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
 #page2_part1>button {
-    /* font-family: "druk heavy"; */
-    font-family: 'Anton', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: var(--primary);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
 
+#page2_part1>button:hover {
+    background-color: #6ca56d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #page2_part2 {
@@ -213,22 +247,26 @@ html, body {
     /* padding: 3.5vmax 3.5vmax; */
     /* border: 0.2vmax solid black; */
     /* box-shadow: 0 0 0.2vmax black; */
-    font-family: Gilroy;
+    font-family: 'Montserrat', sans-serif;
 }
 #page2_part2 h3 {
     font-family: 'Anton', sans-serif;
+    color: var(--primary);
 }
 
 
 #page2_part2 p {
-    font-family: gilroy;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
 
 #box h2 {
     font-family: 'Anton', sans-serif;
+    color: var(--accent);
 }
 #box h2 span {
     font-family: 'Anton', sans-serif;
+    color: var(--accent);
 }
 
 /* page 3 css */
@@ -238,6 +276,7 @@ html, body {
     width: 100vw;
     height: 110vh;
     padding: 0 5vmax 0 10vmax;
+    background-color: #f9f5f0;
 }
 
 #page3 h1 {
@@ -247,13 +286,13 @@ html, body {
     font-weight: 500;
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
-    background: url(img/texture.png);
+    background: url(img/grain-texture.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: rgb(177, 29, 29);
+    background-color: var(--primary);
 }
 #page3_text {
     display: flex;
@@ -268,7 +307,8 @@ html, body {
     font-size: 2vw;
     margin-top: 3vh;
     line-height: 4vh;
-    font-family: Gilroy;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent);
 }
 
 #page3_text_part2 {
@@ -279,7 +319,7 @@ html, body {
     width: 25vw;
     font-size: 1vmax;
     font-family: 'Dosis', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
 }
 #page3_text_part2 h2 {
     margin-top: 2vmax;
@@ -287,12 +327,13 @@ html, body {
     font-size: 1.5vmax;
     font-weight: 100;
     letter-spacing: 0.05vmax;
-
+    color: var(--secondary);
 }
 #page3_text_part2 p {
    margin-top: 3vh;
     font-family: 'Dosis', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 /* Page 4 css */
@@ -302,6 +343,7 @@ html, body {
     height: 100vh;
     display: flex;
     position: relative;
+    background-color: #f9f5f0;
 }
 
 #page4_color_image1 {
@@ -325,6 +367,7 @@ html, body {
     font-weight: 100;
     letter-spacing: 0.1vmax;
     text-transform: uppercase;
+    color: #fff;
 }
 
 
@@ -351,7 +394,7 @@ html, body {
     letter-spacing: 0.1vmax;
     text-align: center;
     text-transform: uppercase;
-    
+    color: #fff;
 }
 
 
@@ -378,6 +421,7 @@ html, body {
     font-weight: 100;
     letter-spacing: 0.1vmax;
     text-transform: uppercase;
+    color: #fff;
 }
 
 #page4_color_image4 {
@@ -399,24 +443,27 @@ html, body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    background-color: #f9f5f0;
 }
 #page5 h5 {
     font-size: 3vmax;
-    font-family: dancing script;
+    font-family: 'Dancing Script', cursive;
+    color: var(--accent);
 }
 #page5 h1 {
-    width: 30vw;
+    width: 60vw;
     text-transform: uppercase;
     font-family: 'Anton',sans-serif;
     font-weight: 600;
     font-size: 6.5vw;
-    background: url(img/texture.png);
+    background: url(img/grain-texture.svg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: black;
+    background-color: var(--primary);
+    text-align: center;
 }
 
 
@@ -463,13 +510,18 @@ html, body {
     transform: rotate(-15deg);
 }
 #page5_bottel h4 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--dark);
+    margin-top: 10px;
 }
 #page5_bottel h6 {
     display: flex;
     justify-content: space-around;
-    font-family: Gilroy;
-    font-size: 1.1vmax;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9vmax;
+    color: var(--accent);
+    letter-spacing: 1px;
 }
 
 
@@ -483,6 +535,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: #f9f5f0;
 }
 
 #page6 img {
@@ -504,7 +557,8 @@ html, body {
 
 #page6_part2 h5 {
     font-size: 2vmax;
-    font-family: dancing script;
+    font-family: 'Dancing Script', cursive;
+    color: var(--accent);
 }
 
 #page6_part2 h1 {
@@ -516,31 +570,36 @@ html, body {
     line-height: 1.2;
     letter-spacing: 0.5vw;
     text-transform: uppercase;
+    color: var(--primary);
 }
 
 #page6_part2 p {
     margin-top: 3vh;
     font-weight: 400;
-    font-family: 'Dosis', sans-serif;
-    color: #111;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
 }
 
 #page6_part2 > button {
     margin-top: 3vh;
     font-size: 1.2vmax;
     padding: 0.8vmax 1.5vmax;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 600;
     color: #fff;
-    background-color: #000;
+    background-color: var(--accent);
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #page6_part2 > button:hover {
-    background-color: #444;
+    background-color: #d06b50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Page 7 */
@@ -553,6 +612,7 @@ html, body {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    background-color: #f9f5f0;
 }
 
 #page7 img {
@@ -573,7 +633,8 @@ html, body {
 
 #page7_part2 h5 {
     font-size: 2vmax;
-    font-family: dancing script;
+    font-family: 'Dancing Script', cursive;
+    color: var(--secondary);
 }
 
 #page7_part2 h1 {
@@ -585,37 +646,59 @@ html, body {
     line-height: 1.1;
     letter-spacing: 0.5vw;
     text-transform: uppercase;
+    color: var(--primary);
 }
 
 #page7_part2 p {
     margin-top: 3vh;
     font-weight: 400;
-    font-family: 'Dosis', sans-serif;
-    color: #111;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
 }
 
 #page7_part2 > button {
     margin-top: 3vh;
     font-size: 1.2vmax;
     padding: 0.8vmax 1.5vmax;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 600;
     color: #fff;
-    background-color: #000;
+    background-color: var(--secondary);
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #page7_part2 > button:hover {
-    background-color: #444;
+    background-color: #d9b16e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #page8{
     font-family: 'Anton', sans-serif;
     letter-spacing: 13px;
+    background-color: #f9f5f0;
 }
 #page9 ul {
     font-family: 'Anton', sans-serif;
+}
+
+#footer {
+    background-color: var(--primary) !important;
+}
+
+#footer button {
+    background-color: var(--accent) !important;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#footer button:hover {
+    background-color: #d06b50 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
